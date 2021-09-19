@@ -76,7 +76,9 @@ public class UI {
 			}
 			System.out.println();
 		}
-		System.out.println("  a b c d e f g h");
+		System.out.println("|----------------|");
+		System.out.println("| a b c d e f g h|");
+		System.out.println("|----------------|");
 	}
 
 	public static void printBoard(chessPiece[][] pieces, boolean[][] possibleMoves) {
@@ -111,9 +113,6 @@ public class UI {
 				.collect(Collectors.toList());
 		List<chessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK)
 				.collect(Collectors.toList());
-		System.out.println("----------------");
-		System.out.println("Captured pieces!");
-		System.out.println("----------------");
 		System.out.println(ANSI_WHITE);
 		System.out.print("-----------------");
 		System.out.print("|White|");
